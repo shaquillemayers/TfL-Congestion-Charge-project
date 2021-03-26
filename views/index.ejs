@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Maps</title>
+    <link rel="stylesheet" href="/assets/styles.css" type="text/css">
+    <link href="//db.onlinewebfonts.com/c/56d537a6559d9eab06614b7eb602f8ee?family=Johnston100W03-Light" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+
+    <header>
+        <nav id="centering">
+            <ul>
+                <li><a href="https://tfl.gov.uk/">TFL Logo</a> </li>
+                <li><a href="https://tfl.gov.uk/plan-a-journey/">Plan a journey</a></li>
+                <li><a href="https://tfl.gov.uk/tube-dlr-overground/status/">Status updates</a></li>
+                <li><a href="https://tfl.gov.uk/maps">Maps</a></li>
+                <li><a href="https://tfl.gov.uk/fares/">Fares</a></li>
+                <li><a href="https://tfl.gov.uk/help-and-contact/">Help & contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="spacer"></div>
+        <div id="container">
+            <div class="corona-warning">
+                <a href="https://www.gov.uk/guidance/national-lockdown-stay-at-home">
+                    <h2 id="centering">Coronavirus</h2>
+                    <p id="centering">National lockdown: Stay at Home</p>
+                </a>        
+            </div>
+
+            <div class="current-path-flow" id="centering">
+                <ol>
+                    <li><a class="not-active" href="https://tfl.gov.uk/">Home</a></li>
+                    <li><a class="not-active" href="https://tfl.gov.uk/modes/driving/">Driving</a></li>
+                    <li><a class="not-active" href="https://tfl.gov.uk/modes/driving/congestion-charge">Congestion Charge</a></li>
+                    <li><a href="https://tfl.gov.uk/modes/driving/congestion-charge/congestion-charge-zone">Congestion Charge/ULEZ Zone</a></li>
+                </ol>
+            </div>
+
+            <div class="heading" id="centering">
+                <h1>Congestion Charge/ULEZ zone</h1>
+            </div>
+
+            <div class="main-content" id="centering">
+
+                <div class="right-content-container">
+                    <div class="login-widget">
+                        <h3>London road user charging</h3>
+                        <a href="/login" class="primary-button" id="account-access-button">Sign in <p class="notice">(<--Try this)</p></a>
+                        <a href="https://tfl.gov.uk/modes/driving/account-create-account-29278" class="secondary-button" id="account-access-button">Create account</a>
+                    </div>
+
+                    <br>
+
+                    <div class="congestion-charge-container">
+                        <a href="https://tfl.gov.uk/modes/driving/congestion-charge" id="congestion-list-heading"><h3>Congestion Charge</h3></a>
+                        
+                        <ul class="congestion-charge-ul">
+                            <li id="congestion-list-subheading"><a href="https://tfl.gov.uk/modes/driving/congestion-charge/congestion-charge-zone">Congestion charge zone <p class="notice">(<--Real site here)</p></a></li>
+                                <ul class="congestion-charge-inner-ul">
+                                    <li><a href="https://tfl.gov.uk/modes/driving/congestion-charge/congestion-charge-zone/road-signs">Road signs</a></li>
+                                </ul>
+                    
+
+                            <li><a href="https://tfl.gov.uk/modes/driving/congestion-charge/paying-the-congestion-charge">Congestion Charge payments</a></li>
+                            <li><a href="https://tfl.gov.uk/modes/driving/congestion-charge/discounts-and-exemptions">Discounts & exemptions</a></li>
+                            <li><a href="https://tfl.gov.uk/modes/driving/congestion-charge/dart-charge">Dart Charge</a></li>
+                            <li><a href="https://tfl.gov.uk/modes/driving/congestion-charge/penalties-and-enforcement">Penalities and enforcement</a></li>
+                            <li><a href="https://tfl.gov.uk/modes/driving/congestion-charge/contact-congestion-charge">Contact Congestion Charge</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="main-content-container">
+                    <div class="article-teaser">
+                        <p>You need to pay a £15 daily charge if you drive within the Congestion Charge zone 07:00-22:00, every day, except Christmas Day (25 December). If your vehicle does not meet the Ultra Low Emission Zone (ULEZ) standards, you must also pay the ULEZ charge.</p>
+                    </div>
+
+                    <p>The ULEZ operates 24 hours a day, 7 days a week, every day of the year, except Christmas Day (25 December). The zone covers the same area as the Congestion Charge.</p>
+
+                    <div class="button-container">
+                        <div class="button">
+                            <a href="https://tfl.gov.uk/modes/driving/pay-to-drive-in-london" class="secondary-button">Pay to drive in London</a>
+                        </div>
+                    </div>
+
+                    <h2 id="test">Postcode and map search</h2>
+
+                    <p>Enter a postcode to see if it's inside one or more of the charging zones. Results will not be displayed on the map.</p>
+
+                    <div id="postcode-check">
+                        <label for="lookup_field">Check a postcode</label>
+                        <div id="lookup_field"></div>
+                        <!-- The above empty div tag will allow the plugin to create the lookup fields -->
+                    </div>
+
+                    
+                    <div id="address_form">
+                        <label>Address</label>
+                        <br>
+                        <textarea class="my-input-class" id="output_field"></textarea>
+                        <button id="select-address-button" class="secondary-button">Select address</button>
+                    </div>
+
+                    <div id="address-search-result">
+                        <h4>Currently unable to detect whether this address is in the Congestion Charge/ULEZ zone. TfL has no existing API for this.</h4>
+                        <button id="try-again-button" class="secondary-button">Try Again</button>
+                    </div>
+
+
+                    <h2>Where it operates</h2>
+
+                    <p> <strong>Hello</strong> Enter a street name, postcode or landmark in the search box to see its location in relation to the charging zones. View zones to show/hide their areas. To see if an address is inside or outside the zones, use the postcode search instead.</p>
+
+                    <div class="map-container">
+                        <div id="floating-panel">
+                            <h3>Map Search</h3>
+                            <input id="address" type="textbox" placeholder="Search location" />
+                            <input id="submit" class="primary-button" type="button" value="Go" />
+                        </div>
+                        <div id="map"></div>
+                    </div>
+
+                    <div>
+                        <h2>Charging times</h2>
+                        <ul class="charging-times-ul">
+                            <li> <strong>Congestion Charge (CC):</strong>  07:00-22:00, 7 days a week, every day of the year, except Christmas Day (25 December)</li>
+                            <li>ULEZ: Operates 24 hours a day, every day of the year, except Christmas Day (25 December)</li>
+                            <li>LEZ: Operates 24 hours a day, every day of the year</li>
+                            <li>Direct Vision Standard (DVS) and HGV Safety Permit: Operates at all times for lorries over 12 tonnes gross vehicle weight</li>
+                        </ul>
+                        <p>Find out&nbsp;more about paying the <a href="/modes/driving/congestion-charge/paying-the-congestion-charge" class="charging-times-ul">Congestion Charge</a>, 
+                            <a href="/modes/driving/ultra-low-emission-zone/ulez-payments" class="charging-times-ul">ULEZ</a> and <a href="/modes/driving/low-emission-zone/make-a-payment" class="charging-times-ul">LEZ</a>,
+                            &nbsp;and learn more about <a href="https://tfl.gov.uk/info-for/deliveries-in-london/delivering-safely/direct-vision-in-heavy-goods-vehicles" class="charging-times-ul">DVS</a></p>
+                    </div>
+                </div>
+
+            </div>       
+            <footer>
+                <div id="centering"> 
+                    <ul class="footer-links-left">
+                        <li> <a href="https://tfl.gov.uk/help-and-contact/">Helps & contacts</a> </li>
+                        <li> <a href="https://tfl.gov.uk/corporate/careers/">Careers</a> </li>
+                        <li> <a href="https://tfl.gov.uk/corporate/about-tfl/">About Tfl</a> </li>
+                        <li> <a href="https://tfl.gov.uk/corporate/safety-and-security/">Safety & security</a> </li>
+                        <li> <a href="https://tfl.gov.uk/corporate/transparency/">Transparency</a> </li>
+                        <li> <a href="https://tfl.gov.uk/corporate/publications-and-reports/">Publications & reports</a> </li>
+                        <li> <a href="https://tfl.gov.uk/travel-information/social-media-and-email-updates/">Social media & email updates</a> </li>
+                        <li> <a href="https://www.ltmuseumshop.co.uk/">Gift Shop</a> </li>
+                    </ul>
+                    
+                    <h2>Information for..</h2>
+                    <br>
+                    <ul class="footer-links-right">
+                        <li><a href="https://tfl.gov.uk/info-for/media/">Media</a></li>
+                        <li><a href="https://tfl.gov.uk/info-for/business-and-commercial/">Business & commercial</a></li>
+                        <li><a href="https://tfl.gov.uk/info-for/boroughs-and-communities/">Boroughs</a></li>
+                        <li><a href="https://tfl.gov.uk/info-for/schools-and-young-people/">School & young people</a></li>
+                        <li><a href="https://tfl.gov.uk/info-for/deliveries-in-london/">Deliveries in London</a></li>
+                        <li><a href="https://tfl.gov.uk/info-for/urban-planning-and-construction/">Urban planning & construction</a></li>
+                        <li><a href="https://tfl.gov.uk/info-for/taxis-and-private-hire/">Taxi & private hire</a></li>
+                        <li><a href="https://tfl.gov.uk/info-for/suppliers-and-contractors/">Suppliers & contractors</a></li>
+                        <li><a href="https://tfl.gov.uk/info-for/bus-operators/">Bus operators</a></li>
+                        <li><a href="https://tfl.gov.uk/info-for/open-data-users/">Open data users</a></li>
+                        <li><a href="https://tfl.gov.uk/info-for/coach-drivers/">Coach drivers</a></li>
+                        <li><a href="https://tfl.gov.uk/info-for/investors/">Investors</a></li>
+                    </ul>
+                
+                </div>
+            </footer>  
+        </div>
+
+ 
+
+
+    </main>
+    
+
+    
+   <script src="https://cdn.jsdelivr.net/npm/@ideal-postcodes/postcode-lookup-bundled@2.0.0/dist/postcode-lookup.min.js"></script>
+
+    <script>
+        // Ideal Postcodes API setup
+        IdealPostcodes.PostcodeLookup.setup({
+          apiKey: '<%=IdealPostcodesApi%>',
+          context: "#lookup_field",
+          onAddressSelected: function(address) {
+        const result = [
+          address.line_1,
+          address.line_2,
+          address.line_3,
+          address.post_town,
+          address.postcode,
+          ].filter(elem => elem !== '').join("\n");
+        
+          // Ideal Postcodes Output field setup
+          document.getElementById('output_field').textContent = result;
+        },
+          buttonClass: 'secondary-button',
+          buttonId: 'find-address-button',
+          inputClass: 'my-input-class',
+          selectClass: 'my-input-class'
+        });
+    </script>
+    
+    <!--
+ 
+    -->
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?key=<%=GoogleApi%>&callback=initMap"></script>
+    
+    <script src="../src/app.js"></script>
+</body>
+</html>

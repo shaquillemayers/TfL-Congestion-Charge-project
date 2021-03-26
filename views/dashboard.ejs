@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/dashboard.css" type="text/css">
+    <link href="//db.onlinewebfonts.com/c/56d537a6559d9eab06614b7eb602f8ee?family=Johnston100W03-Light" rel="stylesheet" type="text/css"/>
+    <title>Dashboard</title>
+</head>
+<body>
+
+    <header>
+        <nav id="centering">
+            <ul>
+                <li><a href="https://tfl.gov.uk/">TFL Logo</a> </li>
+                <li><a href="https://tfl.gov.uk/plan-a-journey/">Plan a journey</a></li>
+                <li><a href="https://tfl.gov.uk/tube-dlr-overground/status/">Status updates</a></li>
+                <li><a href="https://tfl.gov.uk/maps">Maps</a></li>
+                <li><a href="https://tfl.gov.uk/fares/">Fares</a></li>
+                <li><a href="https://tfl.gov.uk/help-and-contact/">Help & contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main> 
+        <div class="spacer"></div>
+        <div id="container">
+            <div class="inner-container">
+                <ul class="outer-ul">
+                    <li id="heading"><h3>Hi <%= user.name %></h3></li>
+                        <ul class="inner-ul">
+                            <li>
+                                <div class="flexbox">
+                                    <img src="<%= user.picture %>" alt="">
+                                </div>
+                            </li> 
+                        </ul>
+            
+
+                    <li><a href="/protectedroute">Protected Route: Only accessible once logged in</a></li>
+                    <li><a href="/">Back to Congestion Charge info</a></li>
+                    <li><a href="/logout">Sign Out</a></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+   
+</body>
+</html>

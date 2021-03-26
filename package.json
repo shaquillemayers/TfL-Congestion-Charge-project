@@ -1,0 +1,31 @@
+{
+  "name": "TfL-Congestion-Charge-project",
+  "version": "1.0.0",
+  "description": "This webpage is a remake of: https://tfl.gov.uk/modes/driving/congestion-charge/congestion-charge-zone",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shaquillemayers/TfL-Congestion-Charge-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shaquillemayers/TfL-Congestion-Charge-project/issues"
+  },
+  "homepage": "https://github.com/shaquillemayers/TfL-Congestion-Charge-project#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "google-auth-library": "^7.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

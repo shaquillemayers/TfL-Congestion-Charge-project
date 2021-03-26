@@ -1,0 +1,10 @@
+# dependencies
+/node_modules
+/media
+
+# files
+
+/.env
+/app.js
+/index.html
+/styles.css
