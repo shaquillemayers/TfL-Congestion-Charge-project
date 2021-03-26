@@ -4,7 +4,7 @@
 
 # files
 
-/.env
+
 /app.js
 /index.html
 /styles.css
