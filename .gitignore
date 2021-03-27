@@ -1,9 +1,9 @@
 # dependencies
 /node_modules
-/media
+
 
 # files
-
+/media
 
 /app.js
 /index.html
