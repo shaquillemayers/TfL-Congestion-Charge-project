@@ -17,3 +17,5 @@ For the Google login authentication, I also used the docs. Users are able to log
 ## Future improvements
 
 In future, I will incorporate user login authentication separate from Google's, using a database, so that users can register to this site, instead of linking to the TfL page.
+
+The loading time of the page is quite slow. This is also something I'll look to rectify in future also.
