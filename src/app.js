@@ -149,6 +149,28 @@ if (tryAgainButton) {
         }, 500);
     })
 
+    // Make mobile menu diplay on click
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    mobileMenu.addEventListener("click", () => {
+      
+      // grab all li elements witl .flex-nav class
+      let listItems = document.querySelectorAll(".flex-nav li");
+
+      // loop through list Items, changing display depending on it's value
+      listItems.forEach((e) => {
+        let displayValue = e.style.display;
+        
+        if(displayValue === "initial"){
+          e.style.display = "none";
+        } else {
+          e.style.display = "initial";
+        }
+      })
+
+      
+    })
+
 
     // Cannot access button from IdealPostcodesAPI using ID assigned. Could previously. but stopped working.
     // No change in code on my end, no change in docs used.    

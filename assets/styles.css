@@ -22,13 +22,17 @@ html, body{
   header {
     position: relative;
     width: 100%;
-    height: 3.625rem;
     z-index: 2;
-    top: 11.25rem;
     text-align: left;
     background-color: #2D3039;
-    border-bottom: 0.1875rem solid #121315;
+  /*   border-bottom: 0.1875rem solid #121315; */
     padding: 0.625rem;
+}
+
+#mobile-menu{
+  text-align: center;
+  width: 100%;
+  display: none;
 }
 
 ul {
@@ -55,16 +59,26 @@ nav a:hover{
   border-bottom: 0.1875rem solid #2070B0;
 }
 
+.flex-nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.flex-nav li{
+  margin: 10px 0;
+  flex: 0 0 auto;
+}
+
 /* Spacer from header */
 .spacer{
   position: relative;
   width: 100%;
-  height: 3.125rem; 
+  height: 14.938rem; 
 }
 
 #container{
   position: relative;
-  top: 7.5rem;
   background-color: white;
 }
 
@@ -76,7 +90,6 @@ nav a:hover{
   background-repeat: no-repeat;
   height: 4.375rem;
   width: 100%;
-  margin-top: 0.5rem;
   margin-bottom: 0;
 }
 
@@ -130,7 +143,6 @@ ol {
   min-width: 18.75rem;
   margin: 0 auto;
   position: relative;
-  display: block;
 }
 
 .current-path-flow li{
@@ -138,15 +150,20 @@ ol {
   display: inline-block;
 }
 
+.main-content{
+  display: flex;
+  flex-wrap: wrap;
+}
+
 /* Left hand side */
 .main-content-container {
   width:63%;
+  margin-right: 7%;
 }
 
 /* Right hand side */
 .right-content-container{
   width: 30%;
-  float: right;
 }
 
 /* Login widget */
@@ -335,6 +352,14 @@ label {
   font-weight: bold;
 }
 
+/* h1 container */
+.heading {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 71.25rem;
+}
+
 h1 {
   font-size: 2.9375rem;
   line-height: 3.4375rem;
@@ -494,6 +519,49 @@ ul.footer-links-right{
   color: #03071C;
 }
 
+
+/* grid behavior on small-medium screens */
+@media screen and (max-width: 768px) {
+  h1{
+    font-size: 2rem;
+  }
+
+  /* List items 50% wide & take entire width evenly */
+  .flex-nav li{
+    flex: 1 1 50%;
+    text-align: center;
+  }
+}
+
+/* Small screens */
+@media screen and (max-width: 480px) and (orientation: portrait) {
+  h1{
+    font-size: 1.5rem;;
+  }
+
+  .article-teaser {
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+  }
+
+  /* List items span vertically & center */
+  .flex-nav li{
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  /* Mobile menu icon display */
+
+  #mobile-menu{
+    display: initial;
+  }
+
+  /* Hide menu */
+  .flex-nav li{
+    display: none;
+  }
+
+}
 
 
 
